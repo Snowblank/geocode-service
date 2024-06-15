@@ -9,6 +9,10 @@ interface IResponseResultData {
 
 dotenv.config();
 
+if(!process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY.length < 1){
+    console.log("API_KEY Not found")
+}
+
 const app = express();
 app.use(express.json());
 
